@@ -155,3 +155,4 @@ if __name__ == '__main__':
         'Calibrated Logistic Regression'
     ]
     binary_experiments()
+    # single_label_experiments()

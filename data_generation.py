@@ -22,7 +22,7 @@ def randomly_modify_prevalences(x: np.array, y: np.array, train_split=1000, test
     new_training_sample = __new_random_sample(train_groups, len(labels), train_split)
 
     # Filter out documents we have already taken for training set
-    mask = np.ones_like(y, dtype=np.bool)
+    mask = np.ones_like(y, dtype=bool)
     mask[new_training_sample] = False
     y_test = y[mask]
     x_test = x[mask]

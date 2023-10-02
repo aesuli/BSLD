@@ -74,7 +74,7 @@ def plot_calibrated_percentiles(measures, extract_data_fn, axs, percent, n_class
     calib = {k: v for k, v in data.items() if k in clf_keys}
     # Transform from {'BS': [.x, .x, .x, .x] ...} to {'BS': {'0': .x, '1': .x, ...}, 'CE': ...}'
     collected = list(map(lambda l: dict((k, {f'{j}': val for j, val in enumerate(v)}) for k, v in l.items()), calib.values()))
-    df = pd.io.json.json_normalize(collected).mean().values
+    df = pd.json_normalize(collected).mean().values
     axs[0].plot(x, df[:4], 'k--', label='Average of the 4 learners')
     axs[1].plot(x, df[4:8], 'k--', label='Average of the 4 learners')
 
