@@ -1,0 +1,29 @@
+ \begin{tabular}{|c|c||r|r|r|r|}
+ \hline
+ \multicolumn{2}{|c||}{$measure}
+ & \multicolumn{1}{c|}{\side{$first_column}}
+ & \multicolumn{1}{c|}{\side{$second_column}}
+ & \multicolumn{1}{c|}{\side{$third_column}}
+ & \multicolumn{1}{c|}{\side{$fourth_column\phantom{0}}} \\
+ \hline\hline
+ \multirow{4}{*}{\side{No-Calib}}
+ & LR & $lr_nocalib \\
+ \cline{2-6}
+ & RF & $rf_nocalib \\
+ \cline{2-6}
+ & MNB & $mnb_nocalib \\
+ \cline{2-6}
+ & \cellcolor[gray]{.65}Avg & $avg_nocalib \\
+ \hline\hline
+ \multirow{5}{*}{\side{Calib}}
+ & LR & $lr_calib \\
+ \cline{2-6}
+ & RF & $rf_calib \\
+ \cline{2-6}
+ & SVM & $svm_calib \\
+ \cline{2-6}
+ & MNB & $mnb_calib \\
+ \cline{2-6}
+ & \cellcolor[gray]{.65}Avg & $avg_calib \\
+ \hline
+ \end{tabular}
